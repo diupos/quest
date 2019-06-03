@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container firststage mt-5" style="display: block">
+		<h1 class="pointme2 text-info">0</h1>
+		<div class="d-flex">
+		<div class="col-4 correctdoor">
+			<img src="door.png" class="w-50 h-50">
+		</div>
+		<div class="col-4 seconddoor">
+			<img src="door2.png" class="w-50 h-50">
+		</div>
+		<div class="col-4 lastdoor">
+			<img src="door3.png" class="w-50 h-50">
+		</div>
+		</div>
+	</div>
+	<div class=" secondstage text-white" style="background-image: url(bg.jpg); height:800px; background-size: 100% 100%; display: none">
+		 <h1>Помоги Гарри найти его метлу,плащ и палочку! Надо заработать 3 очка!</h1>
+		 <h1 class="pointme">0</h1>
+		 <button type="button" class="btn btn-success vixod">Выйти из игры</button>
+		 <div>
+		 <div class="stvol" style="height: 100px; width: 100px; margin-top: 500px; position: absolute; margin-left: 100px">
+		 	<img src="gun.png" class="w-100 h-100">
+		 </div>
+		 <div class="ring" style="height: 30px; width: 30px; position: absolute; margin-left: 500px; margin-top: 500px">
+		 	<img src="ring.png" class="w-100 h-100">
+		 </div>
+		 <div class="metla" style="height: 75px; width: 75px; position: absolute; margin-left: 620px; margin-top: 550px;">
+		 	<img src="metla.png" class="w-100 h-100">
+		 </div>
+		 <div class="palka" style="height: 75px; width: 75px; position: absolute; margin-left: 940px; margin-top: 470px;">
+		 	<img src="palochka.png" class="w-100 h-100">
+		 </div>
+		</div>
+	</div>
+	<div class="thirdstage text-secondary" style="background-image: url(yo.jpg); height: 800px; background-size: 100% 100%; display: none">
+		<h1>Найдите ключи, пульт и стакан! Надо заработать 3 очка!</h1>
+		<h1 class="pointme1">0</h1>
+		<button type="button" class="btn btn-success vixod1">Выйти из игры</button>
+		<div>
+		<div class="pult" style="height: 100px; width: 100px; margin-top: 450px; position: absolute; margin-left: 100px">
+		 	<img src="pult.png" class="w-100 h-100">
+		 </div>
+		<div class="stakan" style="height: 50px; width: 50px; margin-top: 135px; position: absolute; margin-left: 1100px">
+		 	<img src="stakan.png" class="w-100 h-100">
+		</div>
+		<div class="key" style="height: 50px; width: 50px; margin-top: 250px; position: absolute; margin-left: 640px">
+		 	<img src="key.png" class="w-100 h-100">
+		</div>
+		<div class="stvol1" style="height: 100px; width: 100px; margin-top: 500px; position: absolute; margin-left: 500px">
+		 	<img src="gun.png" class="w-100 h-100">
+		 </div>
+		</div>
+	</div>
+	<div class=" laststage text-white" style="background-image: url(library.jpg); height:800px; background-size: 100% 100%; display: none">
+		 <h1>Помоги Гарри найти его метлу,плащ и палочку! Надо заработать 3 очка!</h1>
+		 <h1 class="pointme3">0</h1>
+		 <button type="button" class="btn btn-success vixod">Выйти из игры</button>
+		 <div>
+		 <div class="lozhka" style="height: 100px; width: 100px; margin-top: 290px; position: absolute; margin-left: 100px">
+		 	<img src="spoon.png" class="w-75 h-75">
+		 </div>
+		 <div class="cola" style="height: 100px; width: 100px; position: absolute; margin-left: 500px; margin-top: 240px">
+		 	<img src="cola.png" class="w-100 h-100">
+		 </div>
+		 <div class="vilka" style="height: 75px; width: 75px; position: absolute; margin-left: 620px; margin-top: 550px;">
+		 	<img src="vilka.png" class="w-100 h-100">
+		 </div>
+		 <div class="palka" style="height: 75px; width: 75px; position: absolute; margin-left: 940px; margin-top: 470px;">
+		 	<img src="palochka.png" class="w-100 h-100">
+		 </div>
+		</div>
+	</div>
+	<script type="">
+		let point = 0;
+		let point1 = 0;
+		let obpoint = point + point1;
+
+		document.querySelector(".correctdoor").onclick = function(){
+			alert("owo");
+		  	document.querySelector(".firststage").style.display = "none"
+		  	document.querySelector(".secondstage").style.display = "block"
+		}
+		document.querySelector(".seconddoor").onclick = function(){
+			alert("owo");
+			document.querySelector(".firststage").style.display = "none"
+			document.querySelector(".thirdstage").style.display = "block"
+		}
+		document.querySelector(".lastdoor").onclick = function(){
+			alert("owo");
+			document.querySelector(".firststage").style.display = "none"
+			document.querySelector(".laststage").style.display = "block"
+
+		}
+		document.querySelector(".stvol").onclick = function(){
+			document.querySelector(".secondstage").style.display = "none"
+			document.querySelector(".firststage").style.display = "block"
+			obpoint = point + point1
+		document.querySelector(".pointme2").innerHTML = obpoint
+		}
+		document.querySelector(".stvol1").onclick = function(){
+			document.querySelector(".thirdstage").style.display = "none"
+			document.querySelector(".firststage").style.display = "block"
+			obpoint = point + point1
+		document.querySelector(".pointme2").innerHTML = obpoint
+		}
+		document.querySelector(".ring").onclick = function(){
+			document.querySelector(".ring").style.display = "none"
+			point = point + 1
+			obpoint = point + point1
+			document.querySelector(".pointme").innerHTML = point
+		}
+		document.querySelector(".metla").onclick = function(){
+			document.querySelector(".metla").style.display = "none"
+			point = point + 1
+			obpoint = point + point1
+			document.querySelector(".pointme").innerHTML = point
+		}
+		document.querySelector(".palka").onclick = function(){
+			document.querySelector(".palka").style.display = "none"
+			point = point + 1
+			obpoint = point + point1
+			document.querySelector(".pointme").innerHTML = point
+		}
+		document.querySelector(".vixod").onclick = function(){
+			document.querySelector(".secondstage").style.display = "none"
+			document.querySelector(".firststage").style.display = "block"
+			obpoint = point + point1
+		 document.querySelector(".pointme2").innerHTML = obpoint
+		}
+		document.querySelector(".vixod1").onclick = function(){
+			document.querySelector(".thirdstage").style.display = "none"
+			document.querySelector(".firststage").style.display = "block"
+			obpoint = point + point1
+		document.querySelector(".pointme2").innerHTML = obpoint
+		}
+		document.querySelector(".pult").onclick = function(){
+			document.querySelector(".pult").style.display = "none"
+			point1 = point1 + 1
+			obpoint = point + point1
+			document.querySelector(".pointme1").innerHTML = point1
+		}
+		document.querySelector(".key").onclick = function(){
+			document.querySelector(".key").style.display = "none"
+			point1 = point1 + 1
+			obpoint = point + point1
+			document.querySelector(".pointme1").innerHTML = point1
+		}
+		document.querySelector(".stakan").onclick = function(){
+			document.querySelector(".stakan").style.display = "none"
+			point1 = point1 + 1
+			obpoint = point + point1
+			document.querySelector(".pointme1").innerHTML = point1
+		}
+
+	</script>
+</body>
+</html>
